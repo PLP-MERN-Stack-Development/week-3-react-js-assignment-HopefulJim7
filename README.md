@@ -1,71 +1,128 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19891216&assignment_repo_type=AssignmentRepo)
-# React.js and Tailwind CSS Assignment
+```markdown
+# 🌾 Agro Task Advisor
 
-This assignment focuses on building a responsive React application using JSX and Tailwind CSS, implementing component architecture, state management, hooks, and API integration.
+Agro Task Advisor is a responsive, weather-aware task planning app built for farmers and agri-enthusiasts in mind. It combines real-time weather data with a simple task manager and a collaborative community space—helping users make informed decisions tailored to local conditions.
 
-## Assignment Overview
+[🌐 Live Demo](https://agro-task-advisor.onrender.com)
 
-You will:
-1. Set up a React project with Vite and Tailwind CSS
-2. Create reusable UI components
-3. Implement state management using React hooks
-4. Integrate with external APIs
-5. Style your application using Tailwind CSS
+---
 
-## Getting Started
+## 🖼️ Screenshots
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Install dependencies:
-   ```
-   npm install
-   ```
-4. Start the development server:
-   ```
-   npm run dev
-   ```
+### 🌤️ Weather Dashboard & Task Planner
+![Dashboard Screenshot](./screenshots/dashboard.png) 
+- Live weather updates for Kiambu (OpenWeatherMap)
+- Task creation interface tied to local conditions
+- Clean, responsive layout with dark mode support
 
-## Files Included
+---
 
-- `Week3-Assignment.md`: Detailed assignment instructions
-- Starter files for your React application:
-  - Basic project structure
-  - Pre-configured Tailwind CSS
-  - Sample component templates
+### ➕ Counter Component (Task Progress Tracker)
+![Task Manager Screenshot](screenshots/taskmanager.png) 
+- Interactive counter used as task quantifier or test feature
+- Lightweight component with UI consistency
+- Useful for future expansion (e.g., tracking recurring tasks)
 
-## Requirements
+---
 
-- Node.js (v18 or higher)
-- npm or yarn
-- Modern web browser
-- Code editor (VS Code recommended)
+### 🗣️ Community Post Section
+![Community Feed](./screenshots/community-feed.png)
+- Reframed placeholder data into real farmer-style discussions
+- Styled post cards with semantic structure
+- Optimized for readability and mobile responsiveness
 
-## Project Structure
 
+---
+
+## ✨ Features
+
+- 🔍 **Live Weather Data**: Fetched from OpenWeatherMap and presented with clear visuals
+- 📆 **Task Planner**: Create tasks with optional weather awareness
+- 👥 **Community Feed**: Reimagined placeholder content as farmer discussions
+- 🌗 **Dark Mode**: Toggleable and persists in localStorage
+- ⚡ **PNPM & Vite Build**: Lightning-fast development and deploy pipeline
+
+---
+
+## 🛠 Tech Stack
+
+| Category           | Tools Used                                  |
+|-------------------|----------------------------------------------|
+| Frontend          | React, Tailwind CSS, Vite                   |
+| Package Manager   | pnpm                                         |
+| Weather Data      | OpenWeatherMap API                          |
+| Posts (Placeholder) | JSONPlaceholder API                        |
+| Deployment        | Render                                       |
+| State/Logic       | useState, useEffect, custom hooks           |
+| Extras            | Dark mode toggle, modular architecture      |
+
+---
+
+## 📦 Getting Started
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/PLP-MERN-Stack-Development/week-3-react-js-assignment-HopefulJim7.git
+cd week-3-react-js-assignment-HopefulJim7/TaskManager
 ```
-src/
-├── components/       # Reusable UI components
-├── pages/           # Page components
-├── hooks/           # Custom React hooks
-├── context/         # React context providers
-├── api/             # API integration functions
-├── utils/           # Utility functions
-└── App.jsx          # Main application component
+
+### 2. Install dependencies
+```bash
+pnpm install
 ```
 
-## Submission
+### 3. Add environment variables
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+Create a `.env` file in `TaskManager/`:
 
-1. Complete all required components and features
-2. Implement proper state management with hooks
-3. Integrate with at least one external API
-4. Style your application with Tailwind CSS
-5. Deploy your application and add the URL to your README.md
+```env
+VITE_WEATHER_API_KEY=your_openweather_api_key
+VITE_BASE_URL=https://jsonplaceholder.typicode.com
+```
 
-## Resources
+### 4. Run the dev server
+```bash
+pnpm run dev
+```
 
-- [React Documentation](https://react.dev/)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [Vite Documentation](https://vitejs.dev/guide/)
-- [React Router Documentation](https://reactrouter.com/) 
+---
+
+## 🚀 Build & Deploy
+
+To create a production build:
+
+```bash
+pnpm run build
+```
+
+The output will be in the `dist/` folder. Deploy that folder to your favorite host (e.g. Render, Netlify, Vercel).
+
+---
+
+## 🧠 Developer Notes
+
+- Environment variables must be prefixed with `VITE_` to be recognized by Vite
+- Safe defaults are applied when variables are missing
+- Task and post data can be easily swapped with real endpoints later
+- Designed with modularity and scalability in mind
+
+---
+
+## 📘 Learning Goals
+
+This project was part of a MERN Stack training module, emphasizing:
+
+- Practical use of APIs
+- Scalable frontend architecture
+- Clean state management with React hooks
+- Accessible, responsive design with Tailwind CSS
+- Deployment pipelines with environment isolation
+
+---
+
+## 🪪 License
+
+© 2025 Jim Hope  
+Licensed under the [MIT License](./LICENSE).
+
+---
